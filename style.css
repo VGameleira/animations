@@ -45,6 +45,7 @@ h2 {
     width: 100%;
     color: rgb(34, 0, 255);
     background-color: rgb(255, 0, 238);
+    text-decoration: underline;
 
 }
 
@@ -145,7 +146,7 @@ h2 {
     }
 }
 
-#animacao5 {
+#animacao5{
     width: 200px;
     height: 200px;
     background-color: black;
@@ -155,12 +156,12 @@ h2 {
     align-items: center;
 
 
-    animation-name: cair;
+    animation-name: aumentar;
     animation-duration: 5s;
 }
 
 
-@keyframes cair {
+@keyframes aumentar {
     0% {
         background-color: red;
         color: yellow;
@@ -201,5 +202,122 @@ h2 {
         transform: scale(1.0);
 
 
+    }
+}
+
+
+/* 1 - Criar uma animação utilizando keyframes que dispara quando o click
+ocorre. */
+#animacao6 {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+
+}
+
+@keyframes expandir {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+#btn-anima {
+    padding: 20px;
+    font-size: 16px;
+    background-color: rgb(48, 48, 105);
+    
+    
+    border: none;
+    color: wheat;
+    
+
+}
+
+#btn-anima:active {
+    animation: expandir forwards;
+   
+}
+
+
+
+
+/* 2 - Criar uma animação utilizando a propriedade 
+Transform scale utilizando o hover.
+ 
+Sugestão fazer uma imagem aumentar conforme passamos o mouse  */
+#animacao7 {
+    width: 400px;
+    height: 400px;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+.hover-img {
+    width: 200px;
+    height: auto;
+    transition: transform 1s ease-in-out;
+}
+
+.hover-img:hover {
+    transform: scale(2);
+    
+}
+
+
+/* 3 - Criar uma animação utilizando keyframes que dispara quando 
+passamos o mouse. */
+#animacao8 {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pulsar {
+    padding: 20px;
+    font-size: 16px;
+    background-color: rgb(48, 48, 105);
+    border: none;
+    color: white;
+
+}
+
+.pulsar:hover{
+    animation: pulsar 1s infinite;
+    
+}
+
+@keyframes pulsar {
+    0% {
+        transform: scale(1)
+        
+    }
+
+    50% {
+        transform: scale(1.2)
+    }
+
+    100% {
+        transform: scale(1)
     }
 }
